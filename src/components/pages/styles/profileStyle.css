@@ -1,6 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .globalspace{
     width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
     background-color: rgb(43,43,43);
     
 }
@@ -13,7 +18,6 @@
     display: flex;
     height: 90vh;
     width: 100%;
-    padding-top: 10vh;
 
     overflow: hidden;
 }
@@ -24,22 +28,70 @@
     display: flex;
     width: 50%;
     height: 100%;
-    background-color: rgb(126, 126, 126);
+    background-color: rgb(68, 68, 68);
 
     overflow: hidden;
 }
-.leftPart div, .rightPart div{
+.leftPartContainer, .rightPartContainer{
+    position: relative;
+
     box-sizing: border-box;
+    overflow-y: hidden;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
     
-    background-color: bisque;
 
     padding: 10%;
+
+    
 }
 
+h1, h2, h3, h4, h5, h6{
+    color: aliceblue
+}
+/* ==========================INFO==================== */
 
 
+
+.leftInfoContainer{
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+}
+ 
+.LeftInfo{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+}
+/*
+.userDataProfile{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 10%;
+    border-bottom: 2px solid rgb(188, 195, 201);
+
+    padding-left: 5%;
+    padding-top: 3%;
+    
+}
+#userDataEmail{
+    padding-top: 0%;
+}
+
+#EmptyLine{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 5%;
+    margin-top: 10px;
+    border-top: 4px solid aliceblue;
+
+    padding-left: 10px;
+} */
 

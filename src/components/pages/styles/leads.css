@@ -1,0 +1,139 @@
+.leadsGlobalspace{
+    width: 100vw;
+    max-height: 100vh;
+    background-color: rgb(43,43,43);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    overflow-y: auto; /* Включить вертикальную прокрутку */
+    max-height: 85vh; 
+    scrollbar-width: thin;
+    scrollbar-color: #888 #2b2b2b;
+}
+
+/* Стили для ползунка прокрутки */
+::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px; 
+    border: 3px solid #2b2b2b; 
+}
+
+.leadsMainSpace{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+
+/* ======================Table============== */
+.leadsTable {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+}
+
+.leadsTable th, .leadsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: white;
+
+    height: auto;
+    width: 150px; /* Установите фиксированную ширину ячеек */
+    white-space: nowrap; /* Предотвращает перенос текста */
+    overflow: hidden; /* Прячет текст, выходящий за пределы */
+    text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезан */
+}
+
+.leadsTable th {
+    background-color: #f2f2f2;
+    color: rgb(43,43,43);
+}
+
+.tableInput {
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    appearance: none;
+
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.ID{  /* Поля идентификатора лида "#" */
+    position: relative;
+    width: 40px;
+    align-items: center;    
+}
+
+.deleteLeadBtn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+.leadsTable tr:hover .deleteLeadBtn {
+    display: inline;
+}
+
+/* Кнопка Создать клиента */
+.createClientBtn {
+    background-color: #4CAF50; /* Зеленый */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.createClientBtn:hover {
+    background-color: #45a049;
+}
+
+/* ======================Other */
+
+.scrollToBottomBtn {
+    position: fixed;
+    height: 60px;
+    bottom: 100px;
+    right: 100px;
+    padding: 10px 20px;
+    background-color: #a50000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+
+    transition: transform 0.3s ease; /* Плавная анимация */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.scrollToBottomBtn:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.addLeadbtn{
+    height: 40px;
+    overflow-y: hidden;
+    border-radius: 0;
+}

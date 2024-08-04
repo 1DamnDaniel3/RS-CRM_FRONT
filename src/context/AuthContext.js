@@ -1,29 +1,21 @@
-// src/contexts/AuthContext.js
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState } from 'react';
 
-// Создаем контекст
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
-// Компонент провайдера для контекста
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null); // Здесь можно инициализировать пользователя из локального хранилища или API
+    const [userData, setUserData] = useState(null);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const login = (userData) => {
-    setUser(userData);
-    // Здесь можно сохранить пользователя в локальное хранилище
-  };
-
-  const logout = () => {
-    setUser(null);
-    // Здесь можно удалить пользователя из локального хранилища
-  };
-
-  return (
-    <AuthContext.Provider value={{ user, login, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
+    return (
+        <AuthContext.Provider value={{ 
+            userData, setUserData,
+            errorMessage, setErrorMessage,
+            isLoading, setIsLoading,
+            isAuthenticated, setIsAuthenticated }}>
+                
+            {children}
+        </AuthContext.Provider>
+    );
 };
-
-// Хук для использования контекста
-export const useAuth = () => useContext(AuthContext);

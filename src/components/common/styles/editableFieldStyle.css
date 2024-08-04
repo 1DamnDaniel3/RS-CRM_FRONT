@@ -1,0 +1,47 @@
+.editableField {
+    align-items: center;
+    padding: 1%;
+    margin-bottom: 10px;
+    width: 97%;
+    border: 2px solid rgb(173, 173, 173);
+    border-radius: 10px;
+    overflow-y: hidden;
+}
+
+.editableField label {
+    font-weight: bold;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.editableField div{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+}
+
+.editableField h3 {
+    display: inline-block;
+    margin-right: 10px;
+    width: 70%;
+}
+
+.editableField input {
+    margin-right: 10px;
+    width: 70%;
+    font-size: 18px;
+
+    padding: 0;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    appearance: none;
+}
+
+.editableField button {
+    margin-left: 10px;
+    height: 10%;
+    width: 30%;
+}

@@ -1,3 +1,14 @@
+.mainContent{
+    padding: 0;
+}
+.authorisationContainer{
+    display: flex;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    align-items: center;
+}
+
 .password-container {
     position: relative;
     display: flex;

@@ -21,7 +21,7 @@ const Header = () => {
                     <li className="headerLi"> <Link to="/groups">Группы</Link> </li>
                     <li className="headerLi"> <Link to="/finance">Финансы</Link> </li>
                     <li className="headerLi"> <Link to="/register">Регистрация</Link> </li>
-                    <li className="headerLi"> <Link to="login">Авторизация</Link> </li>
+                    <li className="headerLi"> <Link to="login">Выйти</Link> </li>
                 </ul>
             </nav>
         </header>

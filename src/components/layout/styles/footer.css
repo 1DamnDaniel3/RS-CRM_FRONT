@@ -1,0 +1,12 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    background-color: rgb(30,30,30); /* Примерный цвет для видимости */
+    width: 100vw;
+}
+
+.groupsCountainer{
+    display: flex;
+    flex-direction: row;
+}
