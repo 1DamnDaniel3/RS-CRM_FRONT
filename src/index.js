@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import { AuthProvider } from './context/AuthContext';
+import { GroupProvider } from './context/GroupContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
     <Router>
       <AuthProvider>
-        <App />
+        <GroupProvider>
+          <App />
+        </GroupProvider>
+
       </AuthProvider>
     </Router>
   // </React.StrictMode>

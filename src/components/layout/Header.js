@@ -15,9 +15,9 @@ const Header = () => {
             <nav className="header_nav">
                 <ul>
 
-                    <li className="headerLi"> <Link to="/personnel">Персонал</Link> </li>
+                    <li className="headerLi"> <Link to="/students">Ученики</Link> </li>
                     <li className="headerLi"> <Link to="/leads">Лиды</Link> </li>
-                    <li className="headerLi"> <Link to="/schedule">Расписание</Link> </li>
+                    <li className="headerLi"> <Link to="/payment">P&L / оплаты</Link> </li>
                     <li className="headerLi"> <Link to="/groups">Группы</Link> </li>
                     <li className="headerLi"> <Link to="/finance">Финансы</Link> </li>
                     <li className="headerLi"> <Link to="/register">Регистрация</Link> </li>

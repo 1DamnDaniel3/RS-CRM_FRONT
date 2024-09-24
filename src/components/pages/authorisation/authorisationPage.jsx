@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../../services/api';
-import '../../assets/styles/forms.css';
-import './styles/authorisationPage.css';
-import { AuthContext } from '../../context/AuthContext';
+import api from '../../../services/api';
+import styles from './authorisationPage.module.css'; // Импорт CSS модуля
+import { AuthContext } from '../../../context/AuthContext';
 
 const Authorisation = () => {
     const [formData, setFormData] = useState({
@@ -31,15 +30,12 @@ const Authorisation = () => {
             console.log('User was indenticate successfully', response.data);
 
             if (response.data.message === 'Login_successful') {
-
-                const firstAuthenticate = await api.get('/authenticateUser', { withCredentials: true }); // первичная аутентификация пользователя(получение ID)
+                const firstAuthenticate = await api.get('/authenticateUser', { withCredentials: true });
                 const userDataResponse = await api.get(`/users/${firstAuthenticate.data.user_id}`);
-
                 setUserData(userDataResponse.data);
                 navigate('/profile');
             } else {
                 setErrorMessage('Authorization failed, sorry');
-
             }
         } catch (error) {
             console.error('Error authorising user:', error);
@@ -57,20 +53,20 @@ const Authorisation = () => {
     };
 
     return (
-        <div className='authorisationContainer'>
-            <div className='authorisationWindow'>
+        <div className={styles.authorisationContainer}>
+            <div className={styles.authorisationWindow}>
                 <form onSubmit={handleSubmit}>
                     <input type="email" name="email" placeholder="Email" onChange={handleChange} />
-                    <div className='password-container'>
-                        <input id='passwordField' type={inputType} name="password" placeholder="Password" onChange={handleChange} />
-                        <button className='formBtn' id='ShowBtn' type='button' onClick={togglePasswordVisibility}>
+                    <div className={styles.passwordContainer}>
+                        <input id={styles.passwordField} type={inputType} name="password" placeholder="Password" onChange={handleChange} />
+                        <button className={styles.formBtn} id={styles.ShowBtn} type='button' onClick={togglePasswordVisibility}>
                             {inputType === 'password' ? 'Показать' : 'Скрыть'}
                         </button>
                     </div>
-                    <button className='formBtn' id='authorise' type="submit">Войти</button>
+                    <button className={styles.formBtn} id={styles.authorise} type="submit">Войти</button>
                 </form>
                 <div>
-                    {errorMessage && <div className="error-message">{errorMessage}</div>}
+                    {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
                 </div>
             </div>
         </div>

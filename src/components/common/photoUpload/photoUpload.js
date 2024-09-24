@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import api from "../../services/api";
-import "../common/styles/photoForm.css"
-import placeholderImage from "../../assets/images/img-placeholder.png";
+import api from "../../../services/api";
+import "./photoForm.css"
+import placeholderImage from "../../../assets/images/img-placeholder.png";
 
 const PhotoUpload = ({ serverData }) => {
     // photo & preview

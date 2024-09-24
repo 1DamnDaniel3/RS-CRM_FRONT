@@ -31,18 +31,18 @@
 .leadsTable {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
+    table-layout:auto;
 
 }
 
 .leadsTable th, .leadsTable td {
+    position: relative;
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
     color: white;
 
     height: auto;
-    width: 150px; /* Установите фиксированную ширину ячеек */
     white-space: nowrap; /* Предотвращает перенос текста */
     overflow: hidden; /* Прячет текст, выходящий за пределы */
     text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезан */
@@ -66,16 +66,25 @@
     box-sizing: border-box;
 }
 
+.infoField{
+    width: 15vw;
+    max-width: 15vw; /* Фиксируем максимальную ширину */
+    white-space: nowrap; /* Предотвращаем перенос текста на новую строку */
+    overflow: hidden; /* Прячем текст, выходящий за пределы */
+    text-overflow: ellipsis; /* Добавляем многоточие, если текст обрезан */
+}
+
 .ID{  /* Поля идентификатора лида "#" */
-    position: relative;
-    width: 40px;
+    width: auto;
+    min-width: 20px;
     align-items: center;    
 }
 
 .deleteLeadBtn {
-    position: absolute;
+    position:absolute;
+
     top: 50%;
-    right: 10px;
+    right: 10%;
     transform: translateY(-50%);
     background: none;
     border: none;
@@ -137,3 +146,4 @@
     overflow-y: hidden;
     border-radius: 0;
 }
+

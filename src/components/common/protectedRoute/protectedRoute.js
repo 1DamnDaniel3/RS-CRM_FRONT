@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
-import { AuthContext } from '../../context/AuthContext';
-import { authenticateUser } from '../../services/auth';
+import { AuthContext } from '../../../context/AuthContext';
+import { authenticateUser } from '../../../services/auth';
 
 const ProtectedRoute = () => {
     const { isAuthenticated, setIsAuthenticated,

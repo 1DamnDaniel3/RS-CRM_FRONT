@@ -1,7 +1,8 @@
-.mainContent{
+.mainContent {
     padding: 0;
 }
-.authorisationContainer{
+
+.authorisationContainer {
     display: flex;
     justify-content: center;
     min-width: 100vw;
@@ -9,22 +10,21 @@
     align-items: center;
 }
 
-.password-container {
+.passwordContainer {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.error-message{
+.errorMessage {
     color: white;
 }
 
-.authorisationWindow div{
+.authorisationWindow div {
     display: flex;
     justify-content: center;
     color: rgb(245, 90, 90);
     margin-top: 10px;
-
     width: 100%;
 }

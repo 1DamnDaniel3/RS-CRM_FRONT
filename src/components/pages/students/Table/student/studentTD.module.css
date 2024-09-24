@@ -1,0 +1,26 @@
+.Table{
+    width: 100%;
+}
+
+.TableBody{
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: white;
+
+    height: auto;
+    width: auto;
+    white-space: nowrap; /* Предотвращает перенос текста */
+    overflow: hidden; /* Прячет текст, выходящий за пределы */
+    text-overflow: ellipsis; /* Добавляет многоточие, если текст обрезан */
+}
+.Phone{
+    width: 10%;
+}
+.ID{
+    width: 2%;
+}
+.FIO{
+    width: 15%;
+}
